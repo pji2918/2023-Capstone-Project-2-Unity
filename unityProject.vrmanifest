@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.cosmosnauts.exe",
+      "app_key": "application.hellgate.cosmosnauts.exe",
       "launch_type": "url",
       "url": "steam://launch/",
       "action_manifest_path": "C:\\GitHub\\2023-Capstone-Project-2-Unity\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "Cosmosnauts [Testing]"
+          "name": "Cosmosnauts"
         }
       }
     }
