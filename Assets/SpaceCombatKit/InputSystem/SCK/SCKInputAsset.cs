@@ -709,7 +709,7 @@ public partial class @SCKInputAsset: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""63448052-5c07-4bf4-b275-55ba559a2186"",
-                    ""path"": ""<XInputController>/buttonWest"",
+                    ""path"": ""<XRController>{LeftHand}/thumbstickDpadLeft"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -720,7 +720,7 @@ public partial class @SCKInputAsset: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""70571781-cacc-4744-a6b4-f42e7347a221"",
-                    ""path"": ""<XInputController>/buttonEast"",
+                    ""path"": ""<XRController>{RightHand}/thumbstickDpadRight"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
