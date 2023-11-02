@@ -221,7 +221,7 @@ namespace VSX.UniversalVehicleCombat
         {
             base.EnableInput();
 
-            if(centerCursorOnInputEnabled && hudCursor != null)
+            if (centerCursorOnInputEnabled && hudCursor != null)
             {
                 hudCursor.CenterCursor();
             }
@@ -447,7 +447,7 @@ namespace VSX.UniversalVehicleCombat
 
             // Yaw
             steeringInputs.y = Mathf.Clamp((nonMouseHorizontalInverted ? -1 : 1) * steering.x, -1f, 1f);
-            
+
             UpdateReticulePosition(generalInput.GeneralControls.MouseDelta.ReadValue<Vector2>());
             MouseSteeringUpdate();
 
@@ -455,13 +455,13 @@ namespace VSX.UniversalVehicleCombat
                                             Mathf.Abs(steeringInputs.y) > Mathf.Abs(mouseSteeringInputs.y) ? steeringInputs.y : mouseSteeringInputs.y,
                                             Mathf.Abs(steeringInputs.z) > Mathf.Abs(mouseSteeringInputs.z) ? steeringInputs.z : mouseSteeringInputs.z);
 
-            if (Mouse.current == null || !mouseEnabled)
-            {
-                hudCursor.CenterCursor();
-                reticuleViewportPosition = new Vector3(0.5f, 0.5f, 0);
-            }
+            // if (Mouse.current == null || !mouseEnabled)
+            // {
+            //     hudCursor.CenterCursor();
+            //     reticuleViewportPosition = new Vector3(0.5f, 0.5f, 0);
+            // }
 
-      
+
             // Linked yaw and roll
             if (linkYawAndRoll)
             {
