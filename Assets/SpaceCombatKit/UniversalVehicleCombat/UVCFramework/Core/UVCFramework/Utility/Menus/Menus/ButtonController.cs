@@ -70,25 +70,25 @@ namespace VSX.Utilities.UI
         protected Coroutine transitionCoroutine;
 
 
-        protected override void Reset()
-        {
-            base.Reset();
+        // protected override void Reset()
+        // {
+        //     base.Reset();
 
-            normalState = new ButtonState("Normal");
+        //     normalState = new ButtonState("Normal");
 
-            highlightedState = new ButtonState("Highlighted");
-            highlightedState.priority = 1;
+        //     highlightedState = new ButtonState("Highlighted");
+        //     highlightedState.priority = 1;
 
-            selectedState = new ButtonState("Selected");
-            selectedState.priority = 2;
+        //     selectedState = new ButtonState("Selected");
+        //     selectedState.priority = 2;
 
-            deepSelectedState = new ButtonState("Deep Selected");
+        //     deepSelectedState = new ButtonState("Deep Selected");
 
-            images = new List<Image>(GetComponentsInChildren<Image>());
-            texts = new List<UVCText>(GetComponentsInChildren<UVCText>());
+        //     images = new List<Image>(GetComponentsInChildren<Image>());
+        //     texts = new List<UVCText>(GetComponentsInChildren<UVCText>());
 
-            transition = Transition.None;
-        }
+        //     transition = Transition.None;
+        // }
 
 
         protected override void Awake()
