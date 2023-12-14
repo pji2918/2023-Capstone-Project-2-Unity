@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class PlayerController : MonoBehaviour
     float v;
     Vector3 dir;
 
+    // UI 페이드 인/아웃용 흰색 Image
+    public Image fadeImage;
+
     private void Start()
     {
         //컴포넌트 설정
@@ -23,6 +27,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 }
