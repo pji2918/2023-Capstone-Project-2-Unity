@@ -9,13 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4140573685538426}
-  - component: {fileID: 155368965948563476}
-  - component: {fileID: 114768807756433516}
-  - component: {fileID: 7364190624370176800}
-  - component: {fileID: 1256465192544184063}
-  - component: {fileID: 114724404775509316}
+  - component: {fileID: 7986807462985817883}
+  - component: {fileID: 8253030249398556096}
   m_Layer: 0
-  m_Name: Projectile_Energy_14m
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +35,7 @@ Transform:
   - {fileID: 5190344934579723002}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &155368965948563476
+--- !u!114 &7986807462985817883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,196 +44,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059452319082446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378cbed8f4fe09d44a654ac48e3e6a93, type: 3}
+  m_Script: {fileID: 11500000, guid: 16ab392a1f8a35b4f9201a495ba01e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthModifier:
-    healthModifierType: {fileID: 0}
-    defaultDamageValue: 100
-    damageOverrideValues: []
-    damageMultiplier: 1
-    defaultHealingValue: 0
-    healingOverrideValues: []
-    healingMultiplier: 1
-  healthEffectByDistanceCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  defaultHitEffectPrefabs: []
-  spawnDefaultHitEffectsOnDetonation: 1
-  hitEffectOverrides: []
-  areaEffect: 0
-  areaEffectRadius: 50
-  areaEffectFalloff:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ignoreTriggerColliders: 1
-  areaEffectLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  checkLineOfSight: 1
-  collisionScanner: {fileID: 114768807756433516}
-  detonator: {fileID: 7364190624370176800}
-  speed: 800
-  movementUpdateMode: 1
-  disableAfterLifetime: 0
-  lifetime: 3
-  disableAfterDistanceCovered: 1
-  maxDistance: 1000
---- !u!114 &114768807756433516
-MonoBehaviour:
+--- !u!65 &8253030249398556096
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059452319082446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696e8838ed735264aac535bcba19e9d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitMask:
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 51
-  hitScanIntervalType: 0
-  hitScanFrameInterval: 0
-  hitScanTimeInterval: 0
-  ignoreTriggerColliders: 1
-  ignoreHierarchyCollision: 1
-  rootTransform: {fileID: 0}
-  m_Rigidbody: {fileID: 0}
-  onHitDetected:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7364190624370176800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059452319082446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2f99a298d15294685cea78b5f2c023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  usePoolManager: 1
-  detonatingStateSpawnObjects: []
-  detonatingDuration: 0
-  disableGameObjectOnDetonated: 1
-  detonatedStateSpawnObjects:
-  - {fileID: 1799482097361112, guid: e78f20d774fb42b429c3e9dde4b5a378, type: 3}
-  detonateAfterLifetime: 0
-  lifeTime: 1
-  onDetonating:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetonated:
-    m_PersistentCalls:
-      m_Calls: []
-  onReset:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1256465192544184063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059452319082446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d59e184863c46f248826c40e431393f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runOnEnable: 1
-  distanceBased: 1
-  delay: 0
-  maxLevel: 0.005
-  duration: 0.2
-  rumbleCurve:
+    m_Bits: 0
+  m_ExcludeLayers:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &114724404775509316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059452319082446}
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76f755fa7dc98d49962c622a8c72f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPreOriginShift:
-    m_PersistentCalls:
-      m_Calls: []
-  onPostOriginShift:
-    m_PersistentCalls:
-      m_Calls: []
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 9.697419}
+  m_Center: {x: 0, y: 0, z: 4.8714137}
 --- !u!1 &1649931267902942
 GameObject:
   m_ObjectHideFlags: 0
