@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+<<<<<<< HEAD
+  m_Scenes: []
+=======
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Art/SpaceCombatKit/Demos/Scenes/MainScenes/SCK_EnemyWaves.unity
+    guid: 8a4288098fa4c804d9b5440a8fabea5d
+>>>>>>> 3d6af2d4b4752957ce55f65d61fc28f9c02cd9f8
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: a811c589e1a008b4588fc2898fcfadf8,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c379b208c152fd44fa5cb253a01972c0,
+      type: 2}

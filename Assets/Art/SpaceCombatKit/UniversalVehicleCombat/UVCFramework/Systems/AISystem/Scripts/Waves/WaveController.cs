@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.AddressableAssets.Settings;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace VSX.UniversalVehicleCombat
 {
- 
+
     /// <summary>
     /// Manages a wave made up of WaveSpawn objects.
     /// </summary>
     public class WaveController : MonoBehaviour
     {
-
+        public static WaveController instance;
         [Header("General")]
 
         [SerializeField]
@@ -34,6 +36,7 @@ namespace VSX.UniversalVehicleCombat
         [SerializeField]
         protected float maxSpawnInterval = 0.5f;
 
+        bool oneRound = false;
         protected int nextSpawnIndex = 0;
         protected float delayStartTime;
         protected float nextSpawnInterval;
@@ -56,9 +59,15 @@ namespace VSX.UniversalVehicleCombat
 
         public UnityEvent onWaveDestroyed;
 
+        public Text destroy;
+
 
         protected virtual void Awake()
         {
+            if (instance == null)
+            {
+                instance = this;
+            }
             if (viewCamera == null)
             {
                 viewCamera = Camera.main;
@@ -160,11 +169,35 @@ namespace VSX.UniversalVehicleCombat
 
                 if (check)
                 {
+                    StartCoroutine(destroya());
                     destroyed = true;
                     onWaveDestroyed.Invoke();
                 }
             }
         }
+
+
+        IEnumerator destroya()
+        {
+            yield return new WaitForSeconds(1);
+            destroy.text = "다음 스테이지 시작준비중";
+
+            for (int i = 5; i > 0; i--)
+            {
+                yield return new WaitForSeconds(1);
+                destroy.text = i.ToString();
+            }
+
+            yield return new WaitForSeconds(1);
+            destroy.text = "";
+
+            WaveDataManager.instance.waveCount++;
+            if (WaveDataManager.instance.waveCount == 2)
+            {
+                destroy.text = "포탈을 찾아 이동하세요!";
+            }
+        }
+
 
         public void ResetWave()
         {

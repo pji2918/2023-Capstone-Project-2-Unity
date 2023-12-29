@@ -8,9 +8,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody rd;
 
     //변수 지정
-    float shieldAmount = 50;
-    float hp = 100;
-    float maxHp = 100;
+    float shieldAmount = 100;
+    float hp = 1000;
+    float maxHp = 1000;
     float speed = 1000;
     float rotSpeed = 20;
     float camSpeed = 200;
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     float xRotate;
     float xRotateMove;
     Vector3 dir;
-    
+
 
     private void Start()
     {
