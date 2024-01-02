@@ -14,6 +14,10 @@ public class WaveDataManager : MonoBehaviour
             instance = this;
         }
     }
+    void Update()
+    {
+        Debug.Log(waveCount);
+    }
 
     public int waveCount = 0;
 }

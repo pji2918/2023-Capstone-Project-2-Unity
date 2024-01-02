@@ -20,12 +20,23 @@ public class PortalController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("portal"))
         {
-            other.GetComponent<PlayerController>().fadeImage.DOFade(3, 1).onComplete += () =>
-            {
-                SceneManager.LoadScene("Display");
-            };
+            SceneManager.LoadScene("GameScene2");
+
         }
+        if (other.CompareTag("portal2"))
+        {
+            SceneManager.LoadScene("GameScene3");
+
+        }
+        if (other.CompareTag("portal5"))
+        {
+            SceneManager.LoadScene("Boss");
+
+        }
+
     }
+
 }
+

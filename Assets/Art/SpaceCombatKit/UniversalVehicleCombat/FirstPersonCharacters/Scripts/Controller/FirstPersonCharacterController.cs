@@ -117,8 +117,6 @@ namespace VSX.UniversalVehicleCombat
                 zetpac.SetActive(true);
                 Enemybase.SetActive(true);
                 BattleShip.instance.Gamerule.text = "우주선을 찾았어!";
-
-
             }
         }
         IEnumerator Cucu()

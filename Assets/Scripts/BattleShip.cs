@@ -46,6 +46,7 @@ public class BattleShip : MonoBehaviour
         Gamerule.text = "";
 
 
+
         Turret.SetActive(true);
     }
 

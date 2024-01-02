@@ -37,6 +37,8 @@ namespace VSX.UniversalVehicleCombat
         protected float maxSpawnInterval = 0.5f;
 
         bool oneRound = false;
+
+
         protected int nextSpawnIndex = 0;
         protected float delayStartTime;
         protected float nextSpawnInterval;
@@ -60,6 +62,12 @@ namespace VSX.UniversalVehicleCombat
         public UnityEvent onWaveDestroyed;
 
         public Text destroy;
+
+        public GameObject Portal;
+
+        public GameObject Portal2;
+
+        public Text portal;
 
 
         protected virtual void Awake()
@@ -194,7 +202,14 @@ namespace VSX.UniversalVehicleCombat
             WaveDataManager.instance.waveCount++;
             if (WaveDataManager.instance.waveCount == 2)
             {
+                Debug.Log(WaveDataManager.instance.waveCount);
                 destroy.text = "포탈을 찾아 이동하세요!";
+                Portal.SetActive(true);
+
+            }
+            if (WaveDataManager.instance.waveCount == 3)
+            {
+                Portal2.SetActive(true);
             }
         }
 
