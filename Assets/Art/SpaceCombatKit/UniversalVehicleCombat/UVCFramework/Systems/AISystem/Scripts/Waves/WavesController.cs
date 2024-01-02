@@ -20,6 +20,8 @@ namespace VSX.UniversalVehicleCombat
         [SerializeField]
         protected bool loopWaves = false;
 
+
+
         protected int lastSpawnedWaveIndex = -1;
         public int LastSpawnedWaveIndex
         {

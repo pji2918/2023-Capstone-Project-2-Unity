@@ -32,8 +32,8 @@ namespace VSX.UniversalVehicleCombat
         public bool IsDamageable
         {
             get { return isDamageable; }
-            set 
-            { 
+            set
+            {
                 isDamageable = value;
 
                 SetDamageableAll(isDamageable);
@@ -53,13 +53,13 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
-      
+
         [Header("Events")]
 
         // Collision event
         public OnCollisionEnterEventHandler onCollisionEnter;
 
-   
+
         protected override void Awake()
         {
             base.Awake();
@@ -69,9 +69,9 @@ namespace VSX.UniversalVehicleCombat
             {
                 vehicle.onRestored.AddListener(ResetHealth);
             }
-            
+
             DamageReceiver[] damageReceivers = transform.GetComponentsInChildren<DamageReceiver>();
-            foreach(DamageReceiver damageReceiver in damageReceivers)
+            foreach (DamageReceiver damageReceiver in damageReceivers)
             {
                 onCollisionEnter.AddListener(damageReceiver.OnCollision);
             }
@@ -111,7 +111,7 @@ namespace VSX.UniversalVehicleCombat
         /// <param name="isDamageable">Whether the damageables are damageable.</param>
         protected virtual void SetDamageableAll(bool isDamageable)
         {
-            for(int i = 0; i < damageables.Count; ++i)
+            for (int i = 0; i < damageables.Count; ++i)
             {
                 damageables[i].SetDamageable(isDamageable);
             }
@@ -160,7 +160,7 @@ namespace VSX.UniversalVehicleCombat
 
             if (health != null)
             {
-                foreach(Damageable damageable in health.damageables)
+                foreach (Damageable damageable in health.damageables)
                 {
                     AddDamageable(damageable);
                 }
@@ -202,7 +202,7 @@ namespace VSX.UniversalVehicleCombat
                 }
             }
         }
-        
+
         /// <summary>
         /// Reset the health to starting conditions.
         /// </summary>

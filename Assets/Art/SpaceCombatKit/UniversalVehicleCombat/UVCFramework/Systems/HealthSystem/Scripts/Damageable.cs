@@ -64,7 +64,7 @@ namespace VSX.UniversalVehicleCombat
 
         // The maximum health value for the container
         [SerializeField]
-        protected float healthCapacity = 100;
+        protected float healthCapacity = 10;
         public virtual float HealthCapacity
         {
             get { return healthCapacity; }
@@ -78,13 +78,13 @@ namespace VSX.UniversalVehicleCombat
 
         // The health value of the container when the scene starts
         [SerializeField]
-        protected float startingHealth = 100;
-        public virtual float StartingHealth 
-        { 
+        protected float startingHealth = 10;
+        public virtual float StartingHealth
+        {
             get { return startingHealth; }
-            set 
-            { 
-                startingHealth = Mathf.Clamp(value, 0, healthCapacity); 
+            set
+            {
+                startingHealth = Mathf.Clamp(value, 0, healthCapacity);
             }
         }
 
@@ -103,8 +103,8 @@ namespace VSX.UniversalVehicleCombat
         // Enable/disable damage
         [SerializeField]
         protected bool isDamageable = true;
-        public virtual bool IsDamageable 
-        { 
+        public virtual bool IsDamageable
+        {
             get { return isDamageable; }
             set { isDamageable = value; }
         }
@@ -112,8 +112,8 @@ namespace VSX.UniversalVehicleCombat
         // Enable/disable healing
         [SerializeField]
         protected bool isHealable = true;
-        public virtual bool IsHealable 
-        { 
+        public virtual bool IsHealable
+        {
             get { return isHealable; }
             set { isHealable = value; }
         }
@@ -242,7 +242,7 @@ namespace VSX.UniversalVehicleCombat
             HealthEffectInfo info = new HealthEffectInfo();
             info.amount = damage;
             info.worldPosition = transform.position;
-            
+
             Damage(info);
         }
 
@@ -277,7 +277,7 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
-        
+
         /// <summary>
         /// Heal this damageable.
         /// </summary>
@@ -357,10 +357,10 @@ namespace VSX.UniversalVehicleCombat
             {
                 currentHealth = healthCapacity;
             }
-            
+
             // Call the event
             onRestored.Invoke();
-            
+
         }
 
 

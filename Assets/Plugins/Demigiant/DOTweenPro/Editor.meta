@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: 34ca5bde92f87fa4dbeb9593d201fde2
 folderAsset: yes
 DefaultImporter:
+<<<<<<< HEAD
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+  userData: 
+>>>>>>> b31bade030e190198518091e59bed8838ab02b09

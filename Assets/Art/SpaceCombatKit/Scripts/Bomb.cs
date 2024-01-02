@@ -46,7 +46,7 @@ public class Bomb : MonoBehaviour
     {
         if (other.gameObject.CompareTag("BombPosition"))
         {
-            Debug.Log("23");
+
 
             collider = true;
         }

@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - wall
+  - BombPosition
+  - collider
+  - portal
+  - Coin
+  - Floor
+  - portal2
+  - bomul
+  - Reacter
+  - portal3
+  - portal4
+  - portal5
   layers:
   - Default
   - TransparentFX
