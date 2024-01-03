@@ -4909,6 +4909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7156112845949437998}
+  - component: {fileID: 3425590292009635696}
   m_Layer: 0
   m_Name: Effect_19_FlameDestroyer
   m_TagString: Untagged
@@ -4936,6 +4937,27 @@ Transform:
   - {fileID: 5703127422667666124}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 6.841, y: 0, z: 0}
+--- !u!65 &3425590292009635696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391496450897777769}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 318.0568, y: 8.420575, z: 7.1232343}
+  m_Center: {x: -136.98833, y: 3.5572908, z: -0.35502407}
 --- !u!1 &5019354822437856848
 GameObject:
   m_ObjectHideFlags: 0
@@ -19593,7 +19615,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 7eeb474bb9408e94b802a55a5d3d2884, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
