@@ -21,15 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/End.unity
     guid: 1cc4de5be49f17049a23472c88007c34
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5efeae8ac2ca7cc4180404cb31b50db9,
-      type: 2}
-    com.unity.addressableassets: {fileID: 11400000, guid: a811c589e1a008b4588fc2898fcfadf8,
-      type: 2}
-    com.unity.input.settings: {fileID: 11400000, guid: 4466b11dcc254aa40b5881c34037b67e,
-      type: 2}
-    com.unity.localization.settings: {fileID: 11400000, guid: b363b5b917739e440b659c51edd1fbbe,
-      type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dc20af2c5a695b6499e6b7f1df3bf8f5,
-      type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 6e7b4b4939828b145a211a59d692ed28,
-      type: 2}
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5efeae8ac2ca7cc4180404cb31b50db9, type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: a811c589e1a008b4588fc2898fcfadf8, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 4466b11dcc254aa40b5881c34037b67e, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: b363b5b917739e440b659c51edd1fbbe, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dc20af2c5a695b6499e6b7f1df3bf8f5, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 6e7b4b4939828b145a211a59d692ed28, type: 2}
