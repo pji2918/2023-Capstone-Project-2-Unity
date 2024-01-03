@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    //ÄÄÆ÷³ÍÆ®
+    //ì»´í¬ë„ŒíŠ¸
     Rigidbody rd;
 
-    //º¯¼ö ÁöÁ¤
+    //ë³€ìˆ˜ ì§€ì •
     float shieldAmount = 100;
     float hp = 1000;
     float maxHp = 1000;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     float yRotateMove;
     Vector3 dir;
 
-    // UI ÆäÀÌµå ÀÎ/¾Æ¿ô¿ë Èò»ö Image
+    // UI í˜ì´ë“œ ì¸/ì•„ì›ƒìš© í°ìƒ‰ Image
     public Image fadeImage;
 
     public enum WeaponMode
@@ -42,10 +42,10 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        //ÄÄÆ÷³ÍÆ® ¼³Á¤
+        //ì»´í¬ë„ŒíŠ¸ ì„¤ì •
         rd = GetComponent<Rigidbody>();
 
-        //ÃÊ±â ½ºÅİ ÇÒ´ç
+        //ì´ˆê¸° ìŠ¤í…Ÿ í• ë‹¹
         shieldAmount = 50;
         maxHp = 100;
         hp = maxHp;
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         Quaternion quat = Quaternion.Euler(new Vector3(xRotate, yRotate, 0));
         transform.rotation = Quaternion.Slerp(transform.rotation, quat, Time.deltaTime /* x speed */);
 
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             rd.AddForce(Vector3.up * speed * Time.deltaTime);
         }
@@ -84,9 +84,9 @@ public class PlayerController : MonoBehaviour
         }
         #endregion
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            switch(curWeapon)
+            switch (curWeapon)
             {
                 case WeaponMode.bullet:
                     BulletShoot();
