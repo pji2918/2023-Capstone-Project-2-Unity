@@ -36,16 +36,18 @@ public class BattleShip : MonoBehaviour
     }
     IEnumerator Texts()
     {
+        AudioSource audioSource = Gamerule.transform.parent.GetComponent<AudioSource>();
+
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("적의 기지앞에 역습했다", Gamerule));
+        StartCoroutine(textTyping.TypeText("적의 기지앞에 역습했다", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("이런 앞이 막혀있잖아!", Gamerule));
+        StartCoroutine(textTyping.TypeText("이런 앞이 막혀있잖아!", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("포탈을 잘못타고왔나...?", Gamerule));
+        StartCoroutine(textTyping.TypeText("포탈을 잘못타고왔나...?", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("빨리 우주선을 찾아서 뚫어야해!!", Gamerule));
+        StartCoroutine(textTyping.TypeText("빨리 우주선을 찾아서 뚫어야해!!", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("우주선을 찾아 이곳을 공격하세요!!!", Gamerule));
+        StartCoroutine(textTyping.TypeText("우주선을 찾아 이곳을 공격하세요!!!", Gamerule, audioSource));
         yield return new WaitForSeconds(1);
         Gamerule.text = "";
 
