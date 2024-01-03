@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,9 +9,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody rd;
 
     //변수 지정
-    float shieldAmount = 50;
-    float hp = 100;
-    float maxHp = 100;
+    float shieldAmount = 100;
+    float hp = 1000;
+    float maxHp = 1000;
     float speed = 1000;
     float rotSpeed = 20;
     float camSpeed = 200;
@@ -22,6 +23,9 @@ public class PlayerController : MonoBehaviour
     float yRotate;
     float yRotateMove;
     Vector3 dir;
+
+    // UI 페이드 인/아웃용 흰색 Image
+    public Image fadeImage;
 
     public enum WeaponMode
     {

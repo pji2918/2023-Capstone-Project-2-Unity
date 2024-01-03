@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using JetBrains.Annotations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,7 +9,7 @@ namespace VSX.UniversalVehicleCombat
     /// <summary>
     /// This is a modification of the FirstPersonController script from Unity's Standard Assets.
     /// </summary>
-    [RequireComponent(typeof (AudioSource))]
+    [RequireComponent(typeof(AudioSource))]
     public class FirstPersonCharacterController : MonoBehaviour
     {
         [Header("Rotation")]
@@ -28,7 +30,7 @@ namespace VSX.UniversalVehicleCombat
 
         [SerializeField] protected float walkSpeed = 5;
         [SerializeField] protected float runSpeed = 10;
-        [SerializeField] [Range(0f, 1f)] private float runstepLengthen = 0.7f;
+        [SerializeField][Range(0f, 1f)] private float runstepLengthen = 0.7f;
         [SerializeField] protected float jumpSpeed = 10;
         [SerializeField] protected float stickToGroundForce = 10;
         [SerializeField] protected float gravityMultiplier = 2;
@@ -55,9 +57,11 @@ namespace VSX.UniversalVehicleCombat
         protected bool jumping;
         protected AudioSource audioSource;
 
-        
+        public GameObject zetpac;
+        public GameObject Enemybase;
 
-        
+
+
 
 
         // Use this for initialization
@@ -65,19 +69,19 @@ namespace VSX.UniversalVehicleCombat
         {
 
             characterController = GetComponent<CharacterController>();
-            
+
             if (gimbalController == null)
             {
                 Debug.LogWarning("Add a gimbal controller to the first person character to enable looking around and rotating.");
             }
-         
+
             stepCycle = 0f;
-            nextStep = stepCycle/2f;
+            nextStep = stepCycle / 2f;
             jumping = false;
             audioSource = GetComponent<AudioSource>();
 
             speed = walkSpeed;
- 
+
         }
 
 
@@ -105,6 +109,21 @@ namespace VSX.UniversalVehicleCombat
             jump = true;
         }
 
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("collider"))
+            {
+                StartCoroutine(Cucu());
+                zetpac.SetActive(true);
+                Enemybase.SetActive(true);
+                BattleShip.instance.Gamerule.text = "우주선을 찾았어!";
+            }
+        }
+        IEnumerator Cucu()
+        {
+            yield return new WaitForSeconds(3f);
+
+        }
 
         private void PlayLandingSound()
         {
@@ -119,7 +138,7 @@ namespace VSX.UniversalVehicleCombat
 
             // always move along the camera forward as it is the direction that it being aimed at
             Vector3 desiredMove = characterController.transform.right * input.x + characterController.transform.up * input.y + characterController.transform.forward * input.z;
-            
+
 
             if (enableVerticalMovement)
             {
@@ -159,11 +178,11 @@ namespace VSX.UniversalVehicleCombat
                     moveDir += Physics.gravity * gravityMultiplier * Time.fixedDeltaTime;
                 }
             }
-            
-            collisionFlags = characterController.Move(moveDir*Time.fixedDeltaTime);
-            
+
+            collisionFlags = characterController.Move(moveDir * Time.fixedDeltaTime);
+
             ProgressStepCycle(speed);
-            
+
         }
 
 
@@ -178,7 +197,7 @@ namespace VSX.UniversalVehicleCombat
         {
             if (characterController.velocity.sqrMagnitude > 0 && (input.x != 0 || input.y != 0))
             {
-                stepCycle += (characterController.velocity.magnitude + (speed*(isRunning ? runstepLengthen : 1f))) * Time.fixedDeltaTime;
+                stepCycle += (characterController.velocity.magnitude + (speed * (isRunning ? runstepLengthen : 1f))) * Time.fixedDeltaTime;
             }
 
             if (!(stepCycle > nextStep))
@@ -214,7 +233,7 @@ namespace VSX.UniversalVehicleCombat
         public void SetMovementInputs(float horizontalMovement, float verticalMovement, float forwardMovement)
         {
             input = new Vector3(horizontalMovement, verticalMovement, forwardMovement);
-            
+
             // normalize input if it exceeds 1 in combined length:
             if (input.sqrMagnitude > 1)
             {
@@ -232,14 +251,14 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
-    
+
         public void SetRunning(bool isRunning)
         {
             this.isRunning = isRunning;
             speed = isRunning ? runSpeed : walkSpeed;
         }
-        
-        
+
+
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
 
@@ -256,7 +275,7 @@ namespace VSX.UniversalVehicleCombat
                 return;
             }
 
-            body.AddForceAtPosition(characterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+            body.AddForceAtPosition(characterController.velocity * 0.1f, hit.point, ForceMode.Impulse);
         }
     }
 }
