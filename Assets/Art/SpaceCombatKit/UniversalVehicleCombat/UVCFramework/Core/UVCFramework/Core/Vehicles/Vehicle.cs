@@ -10,13 +10,13 @@ namespace VSX.UniversalVehicleCombat
     /// Unity event for running functions when the vehicle is entered by a game agent.
     /// </summary>
     [System.Serializable]
-    public class OnVehicleEnteredEventHandler : UnityEvent <GameAgent> { };
+    public class OnVehicleEnteredEventHandler : UnityEvent<GameAgent> { };
 
     /// <summary>
     /// Unity event for running functions when the vehicle is exited by a game agent.
     /// </summary>
     [System.Serializable]
-    public class OnVehicleExitedEventHandler : UnityEvent <GameAgent> { };
+    public class OnVehicleExitedEventHandler : UnityEvent<GameAgent> { };
 
 
     /// <summary> 
@@ -24,14 +24,14 @@ namespace VSX.UniversalVehicleCombat
     /// the vehicle, and deals with all kinds of vehicle events.
     /// </summary>
     public class Vehicle : MonoBehaviour
-	{
+    {
 
         [Header("General")]
 
         // The identifying label for this vehicle, used by the loadout menu etc. 
         [SerializeField]
         protected string label = "Vehicle";
-		public virtual string Label { get { return label; } }
+        public virtual string Label { get { return label; } }
 
         // The identifying label for this vehicle, used by the loadout menu etc. 
         [TextArea]
@@ -95,7 +95,7 @@ namespace VSX.UniversalVehicleCombat
 
 
         [Header("Vehicle State Events")]
-        
+
         // Vehicle destroyed event
         public UnityEvent onDestroyed;
 
@@ -130,7 +130,7 @@ namespace VSX.UniversalVehicleCombat
 
 
         protected virtual void Awake()
-		{		
+        {
             cachedGameObject = gameObject;
             cachedRigidbody = GetComponent<Rigidbody>();
 
@@ -244,12 +244,12 @@ namespace VSX.UniversalVehicleCombat
 
         }
 
-        
+
         /// <summary>
         /// Called when a game agent enters the vehicle.
         /// </summary>
         /// <param name="newOccupant">The game agent that entered the vehicle.</param>
-        public virtual void OnEntered (GameAgent newOccupant)
+        public virtual void OnEntered(GameAgent newOccupant)
         {
             if (newOccupant == null) return;
 
@@ -274,9 +274,9 @@ namespace VSX.UniversalVehicleCombat
             }
 
             // Update owner for modules
-            for(int i = 0; i < moduleMounts.Count; ++i)
+            for (int i = 0; i < moduleMounts.Count; ++i)
             {
-                for(int j = 0; j < moduleMounts[i].Modules.Count; ++j)
+                for (int j = 0; j < moduleMounts[i].Modules.Count; ++j)
                 {
                     moduleMounts[i].Modules[j].SetOwner(newOccupant);
                 }
@@ -299,7 +299,7 @@ namespace VSX.UniversalVehicleCombat
         /// Called when a game agent exits a vehicle.
         /// </summary>
         /// <param name="exitingOccupant">The game agent exiting.</param>
-        public virtual void OnExited (GameAgent exitingOccupant)
+        public virtual void OnExited(GameAgent exitingOccupant)
         {
             if (exitingOccupant == null) return;
 
@@ -324,7 +324,7 @@ namespace VSX.UniversalVehicleCombat
 
             if (occupants.Count == 0)
             {
-                for(int i = 0; i < moduleManagers.Count; ++i)
+                for (int i = 0; i < moduleManagers.Count; ++i)
                 {
                     moduleManagers[i].DeactivateModuleManager();
                 }
@@ -352,7 +352,7 @@ namespace VSX.UniversalVehicleCombat
 
                 // Call event
                 onDestroyed.Invoke();
-            }          
+            }
         }
 
 
@@ -360,15 +360,15 @@ namespace VSX.UniversalVehicleCombat
         /// Restore the vehicle after it has been destroyed.
         /// </summary>
         public virtual void Restore()
-		{
+        {
             if (destroyed)
             {
                 destroyed = false;
 
                 // Call event
                 onRestored.Invoke();
-            }         
-		}
+            }
+        }
 
 
         // Show the bounding box visually in the editor scene view

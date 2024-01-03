@@ -223,6 +223,7 @@ MonoBehaviour:
         m_CallState: 2
   destroy: {fileID: 1108811745}
   Portal: {fileID: 338308232}
+  Portal2: {fileID: 0}
   portal: {fileID: 0}
 --- !u!4 &133630327
 Transform:
@@ -706,6 +707,7 @@ MonoBehaviour:
         m_CallState: 2
   destroy: {fileID: 0}
   Portal: {fileID: 0}
+  Portal2: {fileID: 0}
   portal: {fileID: 0}
 --- !u!1001 &373714890
 PrefabInstance:
@@ -1376,11 +1378,88 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4572164664853884, guid: 163e58f67a1a63b4e8dd75b31cf60073, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1111.3291
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572164664853884, guid: 163e58f67a1a63b4e8dd75b31cf60073, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 446.96002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572164664853884, guid: 163e58f67a1a63b4e8dd75b31cf60073, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3703.878
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572164664853884, guid: 163e58f67a1a63b4e8dd75b31cf60073, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.94845563
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572164664853884, guid: 163e58f67a1a63b4e8dd75b31cf60073, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.19909236
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572164664853884, guid: 163e58f67a1a63b4e8dd75b31cf60073, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.24123189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572164664853884, guid: 163e58f67a1a63b4e8dd75b31cf60073, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.05100401
+      objectReference: {fileID: 0}
+    - target: {fileID: 20547301357218766, guid: 163e58f67a1a63b4e8dd75b31cf60073,
+        type: 3}
+      propertyPath: field of view
+      value: 60.000004
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1632872987444946, guid: 163e58f67a1a63b4e8dd75b31cf60073,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 616414471}
   m_SourcePrefab: {fileID: 100100000, guid: 163e58f67a1a63b4e8dd75b31cf60073, type: 3}
+--- !u!1 &616414470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1632872987444946, guid: 163e58f67a1a63b4e8dd75b31cf60073,
+    type: 3}
+  m_PrefabInstance: {fileID: 616414469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &616414471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616414470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &633124212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,6 +3226,7 @@ MonoBehaviour:
         m_CallState: 2
   destroy: {fileID: 1108811745}
   Portal: {fileID: 338308232}
+  Portal2: {fileID: 0}
   portal: {fileID: 0}
 --- !u!4 &1394244512
 Transform:

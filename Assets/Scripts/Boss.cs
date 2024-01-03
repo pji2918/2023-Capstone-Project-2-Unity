@@ -14,6 +14,8 @@ public class Boss : MonoBehaviour
 
     public GameObject Portal;
 
+    public GameObject Enemybase;
+
     void Start()
     {
         StartCoroutine(BossCreate());
@@ -40,9 +42,11 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!reactor[0].activeSelf)
         {
             Portal.SetActive(true);
         }
+
     }
 }

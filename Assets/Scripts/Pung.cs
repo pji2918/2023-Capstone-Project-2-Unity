@@ -25,7 +25,7 @@ public class Pung : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("portal3"))
+        if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene("End");
         }
