@@ -18,6 +18,7 @@ public class BossAttack : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
         InvokeRepeating("RandomAttack", 0f, 4f);
         StartCoroutine(Rull());

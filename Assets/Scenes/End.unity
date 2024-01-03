@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  skill1: {fileID: 0}
+  skill1: {fileID: 5307224146533715921, guid: d37e65b0657e3724d86cbdb7a22a5214, type: 3}
   skill2: {fileID: 4391496450897777769, guid: a0c91ebc1af9acb44bfa13f6ca482bd0, type: 3}
   skill3: {fileID: 1373504867522818537, guid: cb55b7774d7c574459785720cc7915e4, type: 3}
   skill4: {fileID: 7553413994796396999, guid: 8c855961aecc9da46ba33208796d15f8, type: 3}

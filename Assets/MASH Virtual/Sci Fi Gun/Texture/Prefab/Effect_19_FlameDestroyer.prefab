@@ -4909,10 +4909,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7156112845949437998}
-  - component: {fileID: 3425590292009635696}
+  - component: {fileID: 3704328413852444205}
+  - component: {fileID: -1734853377524360445}
   m_Layer: 0
   m_Name: Effect_19_FlameDestroyer
-  m_TagString: Untagged
+  m_TagString: Skill2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4937,7 +4938,34 @@ Transform:
   - {fileID: 5703127422667666124}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 6.841, y: 0, z: 0}
---- !u!65 &3425590292009635696
+--- !u!54 &3704328413852444205
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391496450897777769}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &-1734853377524360445
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4956,8 +4984,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 318.0568, y: 8.420575, z: 7.1232343}
-  m_Center: {x: -136.98833, y: 3.5572908, z: -0.35502407}
+  m_Size: {x: 30, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5019354822437856848
 GameObject:
   m_ObjectHideFlags: 0
