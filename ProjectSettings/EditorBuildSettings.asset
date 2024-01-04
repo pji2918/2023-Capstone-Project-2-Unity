@@ -21,11 +21,17 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene2.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/GameScene2EndAnimeScene.unity
+    guid: b03ab97afb0a5f6408b6e8df18bc6ae1
+  - enabled: 1
     path: Assets/Scenes/GameScene3.unity
     guid: 563f28cce36ee614388a5b03107404f7
   - enabled: 1
     path: Assets/Scenes/Boss.unity
     guid: bbae1db90fdb141438339321b5106e6f
+  - enabled: 1
+    path: Assets/Scenes/BossDieAnimeScene.unity
+    guid: 628fbee190e7c274287ab030f66902f1
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 1cc4de5be49f17049a23472c88007c34

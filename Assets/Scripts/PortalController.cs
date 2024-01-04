@@ -67,7 +67,7 @@ public class PortalController : MonoBehaviour
             fadeImage.gameObject.SetActive(true);
             fadeImage.DOFade(1, 1.5f).OnComplete(() =>
             {
-                SceneManager.LoadScene("EndAnimeScene");
+                SceneManager.LoadScene("BossDieAnimeScene");
             });
         }
     }
