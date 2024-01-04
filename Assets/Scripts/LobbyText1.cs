@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TextTyping;
 using TMPro;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class LobbyText1 : MonoBehaviour
 {
     public TextMeshProUGUI Gamerule;
     private Typing typing = new Typing();
+    [SerializeField] private UnityEngine.UI.Image fadeImage;
     void Start()
     {
         StartCoroutine(Lobbytexts());
@@ -25,6 +28,15 @@ public class LobbyText1 : MonoBehaviour
         yield return new WaitForSeconds(6);
         StartCoroutine(typing.TypeText("이제 적진으로 출발하겠다 오바", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(typing.TypeText("", Gamerule, audioSource));        // Update is called once per frame
+        Gamerule.text = "";
+        if (fadeImage == null)
+        {
+            fadeImage = FindAnyObjectByType<BossAttack>().fadeImage;
+        }
+        fadeImage.gameObject.SetActive(true);
+        fadeImage.DOFade(1, 1.5f).OnComplete(() =>
+        {
+            SceneManager.LoadScene("StartAnimeScene");
+        });
     }
 }

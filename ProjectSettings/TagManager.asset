@@ -20,6 +20,7 @@ TagManager:
   - Skill2
   - Skill3
   - Skill4
+  - portalend
   layers:
   - Default
   - TransparentFX

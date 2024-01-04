@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 01b7748af16aeda469605718a82d7cbf
+  - enabled: 1
+    path: Assets/Scenes/StartAnimeScene.unity
+    guid: 9df68ca9d648ab145a137b86148caa25
+  - enabled: 1
     path: Assets/Scenes/GameScene1.unity
     guid: 7de162d5dcdc8454194b925c337a68bf
   - enabled: 1
@@ -20,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 1cc4de5be49f17049a23472c88007c34
+  - enabled: 1
+    path: Assets/Scenes/EndAnimeScene.unity
+    guid: 9497e10e9600a2747a0aa08f9c520330
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5efeae8ac2ca7cc4180404cb31b50db9, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: a811c589e1a008b4588fc2898fcfadf8, type: 2}

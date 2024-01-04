@@ -112,7 +112,7 @@ public class BossAttack : MonoBehaviour
     {
         if (action == false)
         {
-            int attackIndex = UnityEngine.Random.Range(0, 4);
+            int attackIndex = Random.Range(0, 4);
 
             StopSkillAnimations();
 

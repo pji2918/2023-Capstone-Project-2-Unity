@@ -24,7 +24,7 @@ public class PortalController : MonoBehaviour
     {
         if (other.CompareTag("portal"))
         {
-            if (fadeImage is null)
+            if (fadeImage == null)
             {
                 fadeImage = FindAnyObjectByType<GameManager>().fadeImage;
             }
@@ -36,7 +36,7 @@ public class PortalController : MonoBehaviour
         }
         if (other.CompareTag("portal2"))
         {
-            if (fadeImage is null)
+            if (fadeImage == null)
             {
                 fadeImage = FindAnyObjectByType<BattleShip>().fadeImage;
             }
@@ -48,7 +48,7 @@ public class PortalController : MonoBehaviour
         }
         if (other.CompareTag("portal5"))
         {
-            if (fadeImage is null)
+            if (fadeImage == null)
             {
                 fadeImage = FindAnyObjectByType<SceneThree>().fadeImage;
             }
@@ -58,7 +58,18 @@ public class PortalController : MonoBehaviour
                 SceneManager.LoadScene("Boss");
             });
         }
-
+        if (other.CompareTag("portalend"))
+        {
+            if (fadeImage == null)
+            {
+                fadeImage = FindAnyObjectByType<BossAttack>().fadeImage;
+            }
+            fadeImage.gameObject.SetActive(true);
+            fadeImage.DOFade(1, 1.5f).OnComplete(() =>
+            {
+                SceneManager.LoadScene("EndAnimeScene");
+            });
+        }
     }
 
 }
