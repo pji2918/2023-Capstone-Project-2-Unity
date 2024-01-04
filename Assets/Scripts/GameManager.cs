@@ -1,14 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 using UnityEngine.UI;
-using VSX.UniversalVehicleCombat;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public Text gameRule;
+    public TextMeshProUGUI gameRule;
     void Start()
     {
         StartCoroutine(rule());

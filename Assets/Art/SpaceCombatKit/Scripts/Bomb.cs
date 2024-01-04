@@ -37,7 +37,7 @@ public class Bomb : MonoBehaviour
         }
         if (countdown < 0)
         {
-            bombText.text = "타임 아웃";
+            bombText.text = "?�?? ?�웃";
         }
     }
 
