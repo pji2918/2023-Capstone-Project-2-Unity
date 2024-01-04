@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour
             fadeImage.gameObject.SetActive(false);
         });
         yield return new WaitForSeconds(1);
-        gameRule.text = "잠시후 게임이 시작됩니다";
+        gameRule.text = "근처에서 적들의 전투기가 감지되었습니다.";
+        yield return new WaitForSeconds(1);
+        gameRule.text = "적들이 오고 있습니다.";
         yield return new WaitForSeconds(1);
         gameRule.text = "5";
         yield return new WaitForSeconds(1);

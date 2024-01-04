@@ -88,15 +88,17 @@ public class BossAttack : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         yield return new WaitForSeconds(3f);
         PortalController portalController = FindObjectOfType<PortalController>();
-        StartCoroutine(typing.TypeText("감히 우리본진을 터트려??", Bosstext, bossAudioSource));
+        StartCoroutine(typing.TypeText("감히 우리 군함을 공격하다니!", Bosstext, bossAudioSource));
         yield return new WaitForSeconds(3f);
-        StartCoroutine(typing.TypeText("죽여버리겠다!!", Bosstext, bossAudioSource));
+        StartCoroutine(typing.TypeText("죽어라!!", Bosstext, bossAudioSource));
         yield return new WaitForSeconds(1f);
         Bosstext.text = "";
         yield return new WaitForSeconds(5f);
-        StartCoroutine(typing.TypeText("적의 보스는 보호막을 뚫는스킬들이야", PlayerText, playerAudioSource));
+        StartCoroutine(typing.TypeText("저 빛은 여태까지와는 좀 다른 것 같아. 보호막을 기대할 수는 없을 것 같네..", PlayerText, playerAudioSource));
         yield return new WaitForSeconds(3f);
-        StartCoroutine(typing.TypeText("최대한 스킬을 피한후 보스가 지키고있는 라이트닝을 부셔야해!", PlayerText, playerAudioSource));
+        StartCoroutine(typing.TypeText("저건 뭐지? 저렇게까지 지키고 있다니 중요한 건가..?", PlayerText, playerAudioSource));
+        yield return new WaitForSeconds(3f);
+        StartCoroutine(typing.TypeText("공격을 최대한 피해가머 저기 가재왕이 지키고있는 것을 부셔야겠어!", PlayerText, playerAudioSource));
 
         if (portalController != null)
         {

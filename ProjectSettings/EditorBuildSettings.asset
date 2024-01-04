@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LightSensitivityWarning.unity
+    guid: 27f76a7a64d7e5a47b99233fd2e450c3
+  - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: 8dd0c4ae1257fa7499f00ab1cec1c237
   - enabled: 1

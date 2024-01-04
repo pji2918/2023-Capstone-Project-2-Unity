@@ -48,11 +48,11 @@ public class BattleShip : MonoBehaviour
         yield return new WaitForSeconds(3);
         StartCoroutine(textTyping.TypeText("포탈을 타긴했는데.. 저앞에 있는 괴물은 뭐야", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("몬스터가 이상한 스킬들을 쓰고있어!!", Gamerule, audioSource));
+        StartCoroutine(textTyping.TypeText("저 괴물이 이상한 빛을 뿜어내고 있어!!", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("저건... 적 본진의 에너지를 채워주는 스킬이잖아!??", Gamerule, audioSource));
+        StartCoroutine(textTyping.TypeText("저 빛이...! 적 본진의 에너지를 채워주고 있잖아!??", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("저 뒤에 있는 블럭의 중앙이 에너지 저장소인거같아", Gamerule, audioSource));
+        StartCoroutine(textTyping.TypeText("저 뒤에 있는 블럭의 중앙이 에너지 저장소인거 같아", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
         StartCoroutine(textTyping.TypeText("최대한 빨리 처리해야겠어!", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
