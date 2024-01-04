@@ -13,18 +13,27 @@ public class BattleShip : MonoBehaviour
 
     public GameObject Turret;
 
+    public bool lightOpen;
+    public GameObject Light;
+
+
+
     public Text Gamerule;
+
+
+
     public float Times = 100;
     void Start()
     {
+
         if (instance == null)
         {
             instance = this;
         }
+
         StartCoroutine(Texts());
-
-
     }
+
     void Update()
     {
         Times = Times - Time.deltaTime;
@@ -33,23 +42,22 @@ public class BattleShip : MonoBehaviour
     IEnumerator Texts()
     {
         yield return new WaitForSeconds(3);
-        Gamerule.text = "적의 기지앞에 역습했다";
+        Gamerule.text = "포탈을 타긴했는데.. 저앞에 있는 괴물은 뭐야";
         yield return new WaitForSeconds(3);
-        Gamerule.text = "이런 앞이 막혀있잖아!";
+        Gamerule.text = "몬스터가 이상한 스킬들을 쓰고있어!!";
         yield return new WaitForSeconds(3);
-        Gamerule.text = "포탈을 잘못타고왔나...?";
+        Gamerule.text = "저건... 적 본진의 에너지를 채워주는 스킬이잖아!??";
         yield return new WaitForSeconds(3);
-        Gamerule.text = "빨리 우주선을 찾아서 뚫어야해!!";
+        Gamerule.text = "저 뒤에 있는 블럭의 중앙이 에너지 저장소인거같아";
         yield return new WaitForSeconds(3);
-        Gamerule.text = "우주선을 찾아 이곳을 공격하세요!!!";
-        yield return new WaitForSeconds(1);
+        Gamerule.text = "최대한 빨리 처리해야겠어!";
+        yield return new WaitForSeconds(3);
+        Gamerule.text = "뒤에 있는 저장소를 부셔 적의 에너지를 차단시키자!";
+        yield return new WaitForSeconds(3);
         Gamerule.text = "";
-
-
-
         Turret.SetActive(true);
+        Gamerule.text = "";
+        lightOpen = false;
+
     }
-
-    // Update is called once per frame
-
 }
