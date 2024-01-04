@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator rule()
     {
+        fadeImage.DOFade(0, 1.5f).OnComplete(() =>
+        {
+            fadeImage.gameObject.SetActive(false);
+        });
         yield return new WaitForSeconds(1);
         gameRule.text = "잠시후 게임이 시작됩니다";
         yield return new WaitForSeconds(1);
