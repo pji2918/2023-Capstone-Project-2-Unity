@@ -26,7 +26,7 @@ public class LobbyText1 : MonoBehaviour
         yield return new WaitForSeconds(6);
         StartCoroutine(typing.TypeText("나는 복수를 위해 우주선을 개발해왔고 드디어 오늘 적군의 기지를 공격하려한다.", Gamerule, audioSource));
         yield return new WaitForSeconds(6);
-        StartCoroutine(typing.TypeText("이제 적진으로 출발할것이다.", Gamerule, audioSource));
+        StartCoroutine(typing.TypeText("이제 적진으로 출발할 것이다.", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
         Gamerule.text = "";
         if (fadeImage == null)
