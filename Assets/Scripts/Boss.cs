@@ -25,6 +25,7 @@ public class Boss : MonoBehaviour
     {
         StartCoroutine(BossCreate());
     }
+
     IEnumerator BossCreate()
     {
         fadeImage.DOFade(0, 1.5f).OnComplete(() =>

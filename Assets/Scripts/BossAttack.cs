@@ -33,7 +33,7 @@ public class BossAttack : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        InvokeRepeating("RandomAttack", 0f, 4f);
+        InvokeRepeating("RandomAttack", 0f, 5f);
         StartCoroutine(Rull());
     }
 

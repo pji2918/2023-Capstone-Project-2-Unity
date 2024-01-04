@@ -43,7 +43,7 @@ public class PortalController : MonoBehaviour
             fadeImage.gameObject.SetActive(true);
             fadeImage.DOFade(1, 1.5f).OnComplete(() =>
             {
-                SceneManager.LoadScene("GameScene3");
+                SceneManager.LoadScene("GameScene2EndAnimeScene");
             });
         }
         if (other.CompareTag("portal5"))
