@@ -16,19 +16,28 @@ public class BattleShip : MonoBehaviour
     public GameObject Turret;
 
     public TextMeshProUGUI Gamerule;
+    public bool lightOpen;
+    public GameObject Light;
+
+
+
+
+
+
     public float Times = 100;
 
     public Typing textTyping = new Typing();
     void Start()
     {
+
         if (instance == null)
         {
             instance = this;
         }
+
         StartCoroutine(Texts());
-
-
     }
+
     void Update()
     {
         Times = Times - Time.deltaTime;
@@ -39,22 +48,21 @@ public class BattleShip : MonoBehaviour
         AudioSource audioSource = Gamerule.transform.parent.GetComponent<AudioSource>();
 
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("적의 기지앞에 역습했다", Gamerule, audioSource));
+        StartCoroutine(textTyping.TypeText("포탈을 타긴했는데.. 저앞에 있는 괴물은 뭐야", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("이런 앞이 막혀있잖아!", Gamerule, audioSource));
+        StartCoroutine(textTyping.TypeText("몬스터가 이상한 스킬들을 쓰고있어!!", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("포탈을 잘못타고왔나...?", Gamerule, audioSource));
+        StartCoroutine(textTyping.TypeText("저건... 적 본진의 에너지를 채워주는 스킬이잖아!??", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("빨리 우주선을 찾아서 뚫어야해!!", Gamerule, audioSource));
+        StartCoroutine(textTyping.TypeText("저 뒤에 있는 블럭의 중앙이 에너지 저장소인거같아", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(textTyping.TypeText("우주선을 찾아 이곳을 공격하세요!!!", Gamerule, audioSource));
-        yield return new WaitForSeconds(1);
+        StartCoroutine(textTyping.TypeText("최대한 빨리 처리해야겠어!", Gamerule, audioSource));
+        yield return new WaitForSeconds(3);
+        StartCoroutine(textTyping.TypeText("뒤에 있는 저장소를 부셔 적의 에너지를 차단시키자!", Gamerule, audioSource));
+        yield return new WaitForSeconds(3);
         Gamerule.text = "";
-
-
-
         Turret.SetActive(true);
+        Gamerule.text = "";
+        lightOpen = false;
     }
-
-    // Update is called once per frame
 }

@@ -15,10 +15,10 @@ public class ItemScroller : MonoBehaviour
 
     [SerializeField]
     protected float itemSpacing = 350;
-  
+
     [SerializeField]
     protected int numItems;
-    
+
     protected int scrollCurrentIndex;
     protected int scrollTargetIndex;
     protected Vector3 contentsStartPos = Vector3.zero;
@@ -34,7 +34,7 @@ public class ItemScroller : MonoBehaviour
     [SerializeField]
     protected GameObject scrollRightButton;
 
-    
+
 
 
     private void Awake()
@@ -45,7 +45,7 @@ public class ItemScroller : MonoBehaviour
 
     public void StartScene(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        // SceneManager.LoadScene(sceneIndex);
     }
 
     void UpdateScrollButtons()
@@ -71,7 +71,7 @@ public class ItemScroller : MonoBehaviour
         }
     }
 
-    
+
     public void ScrollBasicDemoButtons(bool scrollRight)
     {
         if (scrolling) return;
@@ -79,11 +79,11 @@ public class ItemScroller : MonoBehaviour
 
         UpdateScrollButtons();
 
-        scrollStartTime = Time.time;        
+        scrollStartTime = Time.time;
         scrolling = true;
-        
+
     }
-    
+
     private void Update()
     {
         if (scrolling)
