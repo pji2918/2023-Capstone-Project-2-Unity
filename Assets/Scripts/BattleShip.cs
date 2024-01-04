@@ -6,30 +6,23 @@ using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 using TextTyping;
 using TMPro;
+using DG.Tweening;
 
 public class BattleShip : MonoBehaviour
 {
     public static BattleShip instance;
     public GameObject[] walls;
     public GameObject Ship;
-
     public GameObject Turret;
-
     public TextMeshProUGUI Gamerule;
     public bool lightOpen;
     public GameObject Light;
-
-
-
-
-
-
     public float Times = 100;
-
     public Typing textTyping = new Typing();
+    public Image fadeImage;
+
     void Start()
     {
-
         if (instance == null)
         {
             instance = this;
@@ -41,10 +34,15 @@ public class BattleShip : MonoBehaviour
     void Update()
     {
         Times = Times - Time.deltaTime;
-
     }
     IEnumerator Texts()
     {
+        fadeImage.DOFade(0, 1.5f).OnComplete(() =>
+        {
+            fadeImage.gameObject.SetActive(false);
+        });
+
+
         AudioSource audioSource = Gamerule.transform.parent.GetComponent<AudioSource>();
 
         yield return new WaitForSeconds(3);

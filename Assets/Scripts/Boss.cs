@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using TextTyping;
+using DG.Tweening;
 
 public class Boss : MonoBehaviour
 {
@@ -18,12 +19,18 @@ public class Boss : MonoBehaviour
 
     public GameObject Enemybase;
 
+    public Image fadeImage;
+
     void Start()
     {
         StartCoroutine(BossCreate());
     }
     IEnumerator BossCreate()
     {
+        fadeImage.DOFade(0, 1.5f).OnComplete(() =>
+        {
+            fadeImage.gameObject.SetActive(false);
+        });
         AudioSource audioSource = BossText.transform.parent.GetComponent<AudioSource>();
 
         yield return new WaitForSeconds(2f);

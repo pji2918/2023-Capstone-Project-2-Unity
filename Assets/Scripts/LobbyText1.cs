@@ -16,7 +16,6 @@ public class LobbyText1 : MonoBehaviour
     IEnumerator Lobbytexts()
     {
         AudioSource audioSource = Gamerule.transform.parent.GetComponent<AudioSource>();
-
         yield return new WaitForSeconds(3);
         StartCoroutine(typing.TypeText("지금으로부터 300년전 가재왕이 우리 기지인 코스모넛 행성을 정복하였다", Gamerule, audioSource));
         yield return new WaitForSeconds(6);
@@ -26,7 +25,6 @@ public class LobbyText1 : MonoBehaviour
         yield return new WaitForSeconds(6);
         StartCoroutine(typing.TypeText("이제 적진으로 출발하겠다 오바", Gamerule, audioSource));
         yield return new WaitForSeconds(3);
-        StartCoroutine(typing.TypeText("", Gamerule, audioSource));
-        // Update is called once per frame
+        StartCoroutine(typing.TypeText("", Gamerule, audioSource));        // Update is called once per frame
     }
 }

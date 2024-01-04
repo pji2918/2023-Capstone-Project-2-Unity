@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using TextTyping;
+using DG.Tweening;
+
 
 public class BossAttack : MonoBehaviour
 {
@@ -24,7 +26,7 @@ public class BossAttack : MonoBehaviour
 
     public GameObject Portal;
     Typing typing = new Typing();
-
+    public Image fadeImage;
     bool action = false;
     bool rull2Running = false; // 추가된 변수
 
@@ -76,6 +78,10 @@ public class BossAttack : MonoBehaviour
 
     IEnumerator Rull()
     {
+        fadeImage.DOFade(0, 1.5f).OnComplete(() =>
+        {
+            fadeImage.gameObject.SetActive(false);
+        });
         AudioSource playerAudioSource = PlayerText.transform.parent.GetComponent<AudioSource>();
         AudioSource bossAudioSource = Bosstext.transform.parent.GetComponent<AudioSource>();
         yield return new WaitForSeconds(1f);
