@@ -232,7 +232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &227098556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,7 +1059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &418916029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 507474954}
-  - {fileID: 910561523}
   spawnsParent: {fileID: 418916030}
   spawnOnEnable: 0
   minSpawnInterval: 0.25
@@ -1407,7 +1406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &517095245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1537,8 +1536,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveControllers:
   - {fileID: 708281094}
-  - {fileID: 418916029}
-  - {fileID: 1377064904}
   loopWaves: 1
   onWavesDestroyed:
     m_PersistentCalls:
@@ -1821,8 +1818,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 357023934}
-  - {fileID: 1681620639}
-  - {fileID: 517095245}
   spawnsParent: {fileID: 708281095}
   spawnOnEnable: 0
   minSpawnInterval: 0.25
@@ -3694,7 +3689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1377064903
 Transform:
   m_ObjectHideFlags: 0
@@ -3825,7 +3820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimerOnEnable: 1
-  duration: 5
+  duration: 30
   delay: 0
   randomizedDuration: 0
   minRandomDuration: 1
@@ -3964,7 +3959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1681620639
 MonoBehaviour:
   m_ObjectHideFlags: 0

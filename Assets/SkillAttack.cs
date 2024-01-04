@@ -6,6 +6,7 @@ using VSX.UniversalVehicleCombat;
 public class SkillAttack : MonoBehaviour
 {
     public DamageReceiver damageReceiver;
+    public DamageReceiver playerShieldDamageReceiver;
     float time = 0;
     // Start is called before the first frame update
     void Start()
@@ -23,11 +24,16 @@ public class SkillAttack : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (time <= 0 && (other.CompareTag("Skill1") || other.CompareTag("Skill2") || other.CompareTag("Skill3") || other.CompareTag("Skill2")))
+
+        if (other.CompareTag("Skill1") || other.CompareTag("Skill2") || other.CompareTag("Skill3") || other.CompareTag("Skill2"))
         {
-            Debug.Log("SkillAttack");
-            damageReceiver.Damage(70);
-            time = 0.5f;
+            if (time <= 0)
+            {
+                Debug.Log("SkillAttack");
+                damageReceiver.Damage(70);
+                playerShieldDamageReceiver.Damage(500);
+                time = 0.5f;
+            }
         }
     }
 }
