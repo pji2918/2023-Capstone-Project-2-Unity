@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -60,13 +61,13 @@ namespace VSX.UniversalVehicleCombat
 
         public UnityEvent onWaveDestroyed;
 
-        public Text destroy;
+        public TextMeshProUGUI destroy;
 
         public GameObject Portal;
 
         public GameObject Portal2;
 
-        public Text portal;
+        public TextMeshProUGUI portal;
 
 
         protected virtual void Awake()

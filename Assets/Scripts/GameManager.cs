@@ -6,6 +6,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI gameRule;
+    public Image fadeImage;
     void Start()
     {
         StartCoroutine(rule());

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TextTyping;
 using TMPro;
+using DG.Tweening;
 
 public class SceneThree : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class SceneThree : MonoBehaviour
     private Typing typing = new Typing();
 
     public GameObject Wave;
-
+    public Image fadeImage;
     bool setting2;
     void Start()
     {
@@ -35,6 +36,10 @@ public class SceneThree : MonoBehaviour
 
     IEnumerator Texts()
     {
+        fadeImage.DOFade(0, 1.5f).OnComplete(() =>
+        {
+            fadeImage.gameObject.SetActive(false);
+        });
         AudioSource audioSource = Gamerule.transform.parent.GetComponent<AudioSource>();
 
         yield return new WaitForSeconds(3);
