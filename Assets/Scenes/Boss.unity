@@ -2350,7 +2350,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
-  m_sharedMaterial: {fileID: 2063110588705223347, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
+  m_sharedMaterial: {fileID: 5679203561870223781, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4421,7 +4421,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10

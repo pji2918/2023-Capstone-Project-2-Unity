@@ -183,7 +183,7 @@ MonoBehaviour:
   m_text: "\uC2DC\uC791"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
-  m_sharedMaterial: {fileID: 2063110588705223347, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
+  m_sharedMaterial: {fileID: 5679203561870223781, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_text: Cosmosnauts
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
-  m_sharedMaterial: {fileID: 2063110588705223347, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
+  m_sharedMaterial: {fileID: 5679203561870223781, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1432,7 +1432,7 @@ MonoBehaviour:
   m_text: "\uC885\uB8CC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
-  m_sharedMaterial: {fileID: 2063110588705223347, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
+  m_sharedMaterial: {fileID: 5679203561870223781, guid: d5a8b5b179fa5ba4aa2ceb4879fc7719, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
